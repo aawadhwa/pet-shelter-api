@@ -12,7 +12,7 @@
             latitude: req.body.latitude,
             longitude: req.body.longitude
           })
-          .then(pet => res.status(201).send(pet))
+          .then(pet => res.status(201).send({"id":pet.dataValues.id}))
           .catch(error => res.status(400).send(error));
       },
 
